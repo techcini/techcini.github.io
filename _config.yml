@@ -1,0 +1,10 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://techcini.github.io
+title: Techcini, LLC
+email: jeff@techcini.com
+author: Jeffrey Mancini
+description: Technology Tips, Tricks and Tidbits!
+paginate: 3
+google_analytics: 
