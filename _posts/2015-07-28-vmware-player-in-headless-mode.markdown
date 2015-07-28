@@ -8,6 +8,7 @@ As most of you might know, VMware Player is a free (albeit limited) alternative 
 Go to the %UserProfile%\Application Data\VMware\preferences.ini file, and open it with notepad. Add the following lines to the file (or modify the existing entry if one of these values exists already):  
 
 pref.vmplayer.exit.vmAction = "disconnect"
+
 pref.vmplayer.confirmOnExit = "FALSE"
 
 Restart VMPlayer and launch your guest VM.  You can now close the window and the VM will continue to run without interruption.  Obviously, if you turn off your PC or terminate the vmware-vmx.exe process it will kill any guest VMs.
