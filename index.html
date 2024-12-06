@@ -26,6 +26,31 @@
             box-sizing: border-box;
         }
 
+        /* Fixed Listen Now Banner */
+        #listen-now-banner {
+            background-color: #800000; /* Maroon red */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 8px 0; /* Slightly smaller padding */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            font-size: 1rem; /* Reduced font size */
+            font-weight: bold;
+        }
+
+        #listen-now-banner a {
+            color: #e2c275; /* Gold link */
+            text-decoration: none;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+
+        #listen-now-banner a:hover {
+            text-decoration: underline;
+        }
+
         /* Body Styles */
         body {
             font-family: 'B612', sans-serif;
@@ -33,6 +58,7 @@
             color: #333;
             line-height: 1.6;
             padding: 20px;
+            margin-top: 50px; /* Offset for fixed banner */
         }
 
         /* Header Styling */
@@ -177,6 +203,11 @@
     </style>
 </head>
 <body>
+    <!-- Fixed "Listen Now" Banner -->
+    <div id="listen-now-banner">
+        🎵 <a href="https://player.pulsemesh.io" target="_blank" rel="noopener noreferrer">Listen Now on PulseMesh</a> 🎵
+    </div>
+
     <header>
         <h1>Techcini Light Show</h1>
         <p>Holiday Light Show in Charleston, SC</p>
