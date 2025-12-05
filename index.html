@@ -26,22 +26,34 @@
             box-sizing: border-box;
         }
 
+        /* Announcement Banner */
+        #update-banner {
+            background-color: #2b4d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
         /* Fixed Listen Now Banner */
         #listen-now-banner {
-            background-color: #800000; /* Maroon red */
-            color: #ffffff; /* White text */
+            background-color: #800000;
+            color: #ffffff;
             text-align: center;
-            padding: 8px 0; /* Slightly smaller padding */
+            padding: 8px 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            font-size: 1rem; /* Reduced font size */
+            font-size: 1rem;
             font-weight: bold;
         }
 
         #listen-now-banner a {
-            color: #e2c275; /* Gold link */
+            color: #e2c275;
             text-decoration: none;
             margin-left: 5px;
             font-weight: bold;
@@ -54,17 +66,17 @@
         /* Body Styles */
         body {
             font-family: 'B612', sans-serif;
-            background-color: #fefbf7; /* Warm off-white background */
+            background-color: #fefbf7;
             color: #333;
             line-height: 1.6;
             padding: 20px;
-            margin-top: 50px; /* Offset for fixed banner */
+            margin-top: 80px; /* Offset for fixed banner */
         }
 
         /* Header Styling */
         header {
-            background-color: #800000; /* Maroon red */
-            color: #e2c275; /* Gold for both title and slogan */
+            background-color: #800000;
+            color: #e2c275;
             padding: 30px 20px;
             text-align: center;
             border-radius: 8px;
@@ -73,16 +85,16 @@
         }
 
         header h1 {
-            font-family: 'Mountains of Christmas', cursive; /* Title uses Mountains of Christmas font */
+            font-family: 'Mountains of Christmas', cursive;
             font-size: 2.5rem;
             margin-bottom: 5px;
             letter-spacing: 1px;
-            color: #e2c275; /* Gold */
+            color: #e2c275;
         }
 
         header p {
             font-size: 1rem;
-            color: #e2c275; /* Gold */
+            color: #e2c275;
         }
 
         /* Navigation Bar */
@@ -107,7 +119,7 @@
         }
 
         nav ul li a:hover {
-            border-bottom: 1px solid white; /* Subtle underline */
+            border-bottom: 1px solid white;
         }
 
         /* Main Content Styling */
@@ -115,7 +127,7 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff; /* Pure white background */
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -126,9 +138,9 @@
 
         h2 {
             font-size: 1.8rem;
-            color: #2b4d33; /* Forest green */
+            color: #2b4d33;
             margin-bottom: 15px;
-            border-bottom: 2px solid #e2c275; /* Gold underline */
+            border-bottom: 2px solid #e2c275;
             padding-bottom: 10px;
         }
 
@@ -148,7 +160,7 @@
         }
 
         ul li a {
-            color: #800000; /* Maroon red for links */
+            color: #800000;
             text-decoration: none;
             font-weight: bold;
             transition: text-decoration 0.3s;
@@ -161,8 +173,8 @@
         .cta-button {
             display: inline-block;
             padding: 12px 20px;
-            background-color: #e2c275; /* Gold */
-            color: #800000; /* Maroon red text */
+            background-color: #e2c275;
+            color: #800000;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
@@ -171,7 +183,7 @@
         }
 
         .cta-button:hover {
-            background-color: #d4b267; /* Slightly darker gold */
+            background-color: #d4b267;
         }
 
         /* Footer Styling */
@@ -186,7 +198,7 @@
             color: #800000;
         }
 
-        /* Media Query for Mobile Responsiveness */
+        /* Media Query for Mobile */
         @media screen and (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -203,6 +215,11 @@
     </style>
 </head>
 <body>
+    <!-- Top Announcement -->
+    <div id="update-banner">
+        🎄 We will be LIVE starting this weekend! 🎄
+    </div>
+
     <!-- Fixed "Listen Now" Banner -->
     <div id="listen-now-banner">
         🎵 <a href="https://player.pulsemesh.io/d/KFZQ" target="_blank" rel="noopener noreferrer">Listen Now on PulseMesh</a> 🎵
@@ -213,8 +230,9 @@
         <p>Holiday Light Show in Charleston, SC</p>
         <nav>
             <ul>
-                <li><a href="#visit-us">Visit Us</a></li>
+                <!-- SWAPPED NAV ORDER -->
                 <li><a href="#at-the-show">At the Show</a></li>
+                <li><a href="#visit-us">Visit Us</a></li>
                 <li><a href="#donate">Donate</a></li>
                 <li><a href="#social">Social</a></li>
             </ul>
@@ -222,18 +240,8 @@
     </header>
 
     <main>
-        <!-- Visit Us Section -->
-        <section id="visit-us">
-            <h2>Visit Us</h2>
-            <p>Join us for the Techcini Light Show in Charleston, SC! Enjoy a festive holiday light display that runs every evening during December.</p>
-            <ul>
-                <li><strong>Location:</strong> <a href="https://maps.app.goo.gl/moCjqQkuyS8RvE88A" target="_blank" rel="noopener noreferrer">Great Egret Drive, Johns Island, SC</a></li>
-                <li><strong>Operating Hours:</strong> Open daily from 6:00 PM to 10:30 PM throughout December.</li>
-                <li><strong>Showtimes:</strong> Shows run continously during operating hours.</li>
-            </ul>
-        </section>
 
-        <!-- At the Show Section -->
+        <!-- At the Show (MOVED FIRST) -->
         <section id="at-the-show">
             <h2>At the Show</h2>
             <p>To fully experience the Techcini Light Show, tune in to the music that syncs perfectly with the lights. Here’s how:</p>
@@ -242,9 +250,9 @@
                 <li><strong>Visit <a href="https://player.pulsemesh.io/d/KFZQ" target="_blank" rel="noopener noreferrer">player.pulsemesh.io</a></strong> on any device.</li>
             </ul>
             <p><strong>Show Schedule:</strong> The light show runs daily from 6:00 PM to 10:30 PM.</p>
-            <p><strong>Safety Rules:</strong> Please follow these safety guidelines to ensure a smooth and enjoyable experience:</p>
+            <p><strong>Safety Rules:</strong> Please follow these guidelines:</p>
             <ul>
-                <li><strong>Do not walk on the lawn:</strong> There are high and low voltage cables running across the yard.</li>
+                <li><strong>Do not walk on the lawn:</strong> High and low voltage cables present.</li>
                 <li><strong>Dim your headlights</strong> to avoid glare.</li>
                 <li><strong>Do not block the road or driveways.</strong></li>
                 <li><strong>Watch for children</strong> in the area.</li>
@@ -252,21 +260,33 @@
             </ul>
         </section>
 
-        <!-- Donate Section -->
+        <!-- Visit Us (MOVED SECOND) -->
+        <section id="visit-us">
+            <h2>Visit Us</h2>
+            <p>Join us for the Techcini Light Show in Charleston, SC! Enjoy a festive holiday light display that runs every evening during December.</p>
+            <ul>
+                <li><strong>Location:</strong> <a href="https://maps.app.goo.gl/moCjqQkuyS8RvE88A" target="_blank" rel="noopener noreferrer">Great Egret Drive, Johns Island, SC</a></li>
+                <li><strong>Operating Hours:</strong> Open daily from 6:00 PM to 10:30 PM throughout December.</li>
+                <li><strong>Showtimes:</strong> Shows run continuously during operating hours.</li>
+            </ul>
+        </section>
+
+        <!-- Donate -->
         <section id="donate">
             <h2>Donate</h2>
-            <p>If you’d like to support a great cause, consider donating to the National Arthritis Foundation. Your donations help fund arthritis research and provide support for people living with arthritis.</p>
+            <p>If you’d like to support a great cause, consider donating to the National Arthritis Foundation.</p>
             <a href="https://www.arthritis.org/donate" target="_blank" rel="noopener noreferrer" class="cta-button">Donate Now</a>
         </section>
 
-        <!-- Social Section -->
+        <!-- Social -->
         <section id="social">
             <h2>Follow Us on Social Media</h2>
-            <p>Stay connected with our light show and other exciting projects by following us on YouTube.</p>
+            <p>Stay connected by following us on YouTube.</p>
             <ul>
-                <li><a href="https://youtube.com/@techcini" target="_blank" rel="noopener noreferrer">Check out our YouTube Channel - Techcini</a></li>
+                <li><a href="https://youtube.com/@techcini" target="_blank" rel="noopener noreferrer">Techcini YouTube Channel</a></li>
             </ul>
         </section>
+
     </main>
 
     <footer>
