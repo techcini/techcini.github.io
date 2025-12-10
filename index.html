@@ -7,9 +7,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-EGPHHXPGPT');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join the Techcini Light Show in Charleston, SC, for a magical holiday experience featuring synchronized lights and music.">
@@ -26,36 +26,39 @@
             box-sizing: border-box;
         }
 
-        /* Announcement Banner */
-        #update-banner {
-            background-color: #2b4d33;
+        /* Fixed Listen Now Banner (GREEN, SHRINKS ON SCROLL) */
+        #listen-now-banner {
+            background-color: #2f8f4e; /* green */
             color: #ffffff;
             text-align: center;
             padding: 10px 0;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            border-radius: 6px;
-        }
-
-        /* Fixed Listen Now Banner */
-        #listen-now-banner {
-            background-color: #800000;
-            color: #ffffff;
-            text-align: center;
-            padding: 8px 0;
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
             font-size: 1rem;
             font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition:
+                padding 0.25s ease,
+                font-size 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        /* Smaller / tighter banner once you scroll */
+        body.scrolled #listen-now-banner {
+            padding: 4px 0;
+            font-size: 0.9rem;
+            background-color: #256f3c; /* slightly darker green */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         #listen-now-banner a {
-            color: #e2c275;
+            color: #ffe9a9;
             text-decoration: none;
-            margin-left: 5px;
+            margin: 0 4px;
             font-weight: bold;
         }
 
@@ -69,18 +72,19 @@
             background-color: #fefbf7;
             color: #333;
             line-height: 1.6;
-            padding: 20px;
-            margin-top: 80px; /* Offset for fixed banner */
+            padding: 16px 20px 20px; /* slightly reduced top padding */
+            margin-top: 60px; /* smaller offset for fixed banner */
         }
 
         /* Header Styling */
         header {
             background-color: #800000;
             color: #e2c275;
-            padding: 30px 20px;
+            padding: 26px 20px;
             text-align: center;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin: 10px auto 24px; /* pulls header up closer to banner */
+            max-width: 900px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -125,7 +129,7 @@
         /* Main Content Styling */
         main {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 40px;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 10px;
@@ -189,7 +193,7 @@
         /* Footer Styling */
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 10px;
             color: #777;
         }
 
@@ -234,7 +238,9 @@
             </ul>
         </nav>
     </header>
-        <!-- At the Show (MOVED FIRST) -->
+
+    <main>
+        <!-- At the Show -->
         <section id="at-the-show">
             <h2>At the Show</h2>
             <p>To fully experience the Techcini Light Show, tune in to the music that syncs perfectly with the lights. Here’s how:</p>
@@ -253,7 +259,7 @@
             </ul>
         </section>
 
-        <!-- Visit Us (MOVED SECOND) -->
+        <!-- Visit Us -->
         <section id="visit-us">
             <h2>Visit Us</h2>
             <ul>
@@ -278,11 +284,21 @@
                 <li><a href="https://youtube.com/@techcini" target="_blank" rel="noopener noreferrer">Techcini YouTube Channel</a></li>
             </ul>
         </section>
-
     </main>
 
     <footer>
         <p>© 2025 Techcini Light Show | Powered by Holiday Spirit</p>
     </footer>
+
+    <!-- Shrink-on-scroll script -->
+    <script>
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 10) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
